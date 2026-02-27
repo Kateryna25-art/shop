@@ -55,8 +55,8 @@ function images(){
 
 
 function styles() {
-    return src('app/scss/style.scss')
-    .pipe(scss({ outputStyle: 'compressed'}))
+    return src('app/scss/*.scss')
+    .pipe(scss({style: 'compressed'}))
     .pipe(autoPrefixer({
     overrideBrowserslist:['last 10 version']
     }))
@@ -83,7 +83,7 @@ browserSync.init({
         baseDir: 'app/'
     }
 });
-watch(['app/scss/style.scss'], styles)
+watch(['app/scss/*.scss'], styles)
 watch(['app/images/src'], images)
 watch(['app/images/sprite'], sprites)
 watch(['app/pages/*', 'app/components/*'], pages)
