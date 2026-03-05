@@ -5,49 +5,163 @@
 
 
 body {
-    @extend %opensans-400;
-    font-size: 20px;
-    line-height: 1.3;
-   color: vars.$color-accent;
+  @extend %opensans-400;
+  font-size: 20px;
+  line-height: 1.3;
+  color: vars.$color-accent;
 }
 
 .header {
-    padding: 20px 0 40px;
-    text-transform: uppercase;
-    font-size: 16px;
-    color: vars.$color-primary;
-    &__inner {
-   display: flex;
+  padding: 20px 0 40px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: vars.$color-primary;
+
+  &__inner {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  &__logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__lang {
+    display: flex;
+
+    &--active {
+      @extend %opensans-700;
     }
-    &__logo{
-        width: 100%;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    &__lang {
-        display: flex;
-        
-        &--active {
-            @extend %opensans-700;
-        }
-    }
-     &__actions{
-        display: flex;
-        gap: 20px;
-        align-items: center;
-    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
 }
+
 .menu {
-    &__list {
-        display: flex;
-        gap: 30px;
-    }
-   
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .logo {
-   display: inline-block;
+  display: inline-block;
+}
+
+.footer {
+  font-size: 16px;
+  color: vars.$color-text-muted;
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 55px 0 44px;
+    border-bottom: 1px solid vars.$bg-primary;
+    margin-bottom: 50px;
+  }
+
+  &__menu-link {
+    border-bottom: 1px solid vars.$bg-primary;
+  }
+
+  &__elements {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 45px;
+  }
+
+  &__element-title {
+    opacity: 0.5;
+    margin-bottom: 20px;
+  }
+
+  &__element-list {
+    margin-bottom: 5px;
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__form {
+    width: 250px;
+    position: relative;
+  }
+
+  &__form-input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid vars.$bg-primary;
+    color: vars.$color-text-muted;
+    padding: 1px 30px 5px 0;
+
+    &::placeholder {
+      color: vars.$color-text-muted;
+    }
+  }
+
+  &__form-btn {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    @extend %button-reset;
+  }
+
+  &__bottom {
+    background-color: vars.$bg-primary;
+    padding: 7px 0 9px;
+    font-size: 11px;
+    color: vars.$color-primary;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copy {
+    padding-left: 26px;
+  }
+
+  &__bottom-list {
+    display: flex;
+    gap: 0 37px;
+    align-items: center;
+  }
+
+  &__bottom-item+.footer__bottom-item {
+    position: relative;
+
+    &::before {
+      content: '|';
+      position: absolute;
+      left: -21px;
+    }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
