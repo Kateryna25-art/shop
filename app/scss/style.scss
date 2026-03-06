@@ -11,6 +11,15 @@ body {
   color: vars.$color-accent;
 }
 
+.promo {
+  padding: 7px 0 9px;
+  background-color: vars.$bg-primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: vars.$color-primary;
+}
+
 .header {
   padding: 20px 0 40px;
   text-transform: uppercase;
@@ -163,5 +172,46 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+}
+
+.top {
+  min-height: 90vh;
+  background-image: image-set(url('../images/top-bg.avif') type('image/avif'),
+      url('../images/top-bg.webp') type('image/webp'),
+      url('../images/top-bg.jpg'),
+    );
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  &__content {
+padding: 115px 0 50px;
+max-width: 446px;
+    width: 100%;
+     margin-right: 134px;
+  }
+
+  &__title {
+    
+   
+    @extend %lora-400;
+    font-size: 80px;
+    margin-bottom: 60px;
+    line-height: 1.2;
+  }
+
+  &__link {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: vars.$color-accent;
+    padding: 12px 38px;
+    border-radius: 3px;
   }
 }
