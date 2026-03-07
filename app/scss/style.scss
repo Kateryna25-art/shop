@@ -185,21 +185,22 @@ body {
   background-size: cover;
 
   &__inner {
-    
+
     display: flex;
     flex-direction: column;
     align-items: end;
   }
+
   &__content {
-padding: 115px 0 50px;
-max-width: 446px;
+    padding: 115px 0 50px;
+    max-width: 446px;
     width: 100%;
-     margin-right: 134px;
+    margin-right: 134px;
   }
 
   &__title {
-    
-   
+
+
     @extend %lora-400;
     font-size: 80px;
     margin-bottom: 60px;
@@ -213,5 +214,70 @@ max-width: 446px;
     background-color: vars.$color-accent;
     padding: 12px 38px;
     border-radius: 3px;
+  }
+}
+
+.new-collection {
+
+  background-image: url(../images/new-collection-decor.svg);
+  background-repeat: no-repeat;
+  background-position: 0px -36%;
+
+  &__inner {
+    display: flex;
+    padding: 150px 0;
+  }
+
+  &__content {
+    padding: 75px 40px 0 40px;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 45px;
+    @extend %lora-400;
+  }
+
+  &__text {
+    color: vars.$color-text-muted;
+     margin-bottom: 50px;
+  }
+
+  &__text + .new-collection__text {
+  margin-top: 25px;
+  }
+  &__btn {
+    display: inline-block;
+    font-size: 16px;
+    color: vars.$color-text-muted;
+    border: 1px solid vars.$color-text-muted;
+    padding: 10px 65px;
+    margin-top: auto;
+    align-self: flex-start;
+  }
+  &__img {
+    margin-top: 75px;
+  }
+  &__box {
+position: relative;
+padding-left: 40px;
+padding-right: 40px;
+display: flex;
+  }
+  &__box-img {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    max-width: fit-content;
+  }
+  &__caption {
+    width: 290px;
+    margin-top: auto;
+    margin-bottom: 40px;
+    color: vars.$color-text-muted;
   }
 }
