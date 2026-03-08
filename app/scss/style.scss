@@ -184,6 +184,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
+  .title-accent {
+    @extend %lora-400;
+    color: vars.$color-accent;
+  }
+
   &__inner {
 
     display: flex;
@@ -199,9 +204,6 @@ body {
   }
 
   &__title {
-
-
-    @extend %lora-400;
     font-size: 80px;
     margin-bottom: 60px;
     line-height: 1.2;
@@ -218,10 +220,14 @@ body {
 }
 
 .new-collection {
-
   background-image: url(../images/new-collection-decor.svg);
   background-repeat: no-repeat;
   background-position: 0px -36%;
+  
+   .btn-muted {
+    color: vars.$color-text-muted;
+    border-color: vars.$color-text-muted;
+  }
 
   &__inner {
     display: flex;
@@ -239,17 +245,18 @@ body {
   &__title {
     margin-bottom: 50px;
     font-size: 45px;
-    @extend %lora-400;
+
   }
 
   &__text {
     color: vars.$color-text-muted;
-     margin-bottom: 50px;
+    margin-bottom: 50px;
   }
 
-  &__text + .new-collection__text {
-  margin-top: 25px;
+  &__text+.new-collection__text {
+    margin-top: 25px;
   }
+
   &__btn {
     display: inline-block;
     font-size: 16px;
@@ -259,21 +266,25 @@ body {
     margin-top: auto;
     align-self: flex-start;
   }
+
   &__img {
     margin-top: 75px;
   }
+
   &__box {
-position: relative;
-padding-left: 40px;
-padding-right: 40px;
-display: flex;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
   }
+
   &__box-img {
     position: absolute;
     top: 0;
     left: -75px;
     max-width: fit-content;
   }
+
   &__caption {
     width: 290px;
     margin-top: auto;
