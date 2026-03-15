@@ -68,7 +68,6 @@
   }
 
   &__elements {
-    display: flex;
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 45px;
@@ -168,11 +167,7 @@
 
   &__link {
     display: inline-block;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: vars.$color-accent;
     padding: 12px 38px;
-    border-radius: 3px;
   }
 }
 
@@ -195,7 +190,6 @@
 
   &__title {
     margin-bottom: 50px;
-    font-size: 45px;
   }
 
   &__text {
@@ -210,9 +204,6 @@
   &__btn {
     display: inline-block;
     font-size: 16px;
-    color: vars.$color-text-muted;
-    border: 1px solid vars.$color-text-muted;
-    padding: 10px 65px;
     margin-top: auto;
     align-self: flex-start;
   }
@@ -246,7 +237,6 @@
   background-color: vars.$bg-primary;
 
   &__inner {
-    display: flex;
     gap: 40px;
     padding: 0 40px;
   }
@@ -260,10 +250,7 @@
   }
 
   &__title {
-    text-transform: uppercase;
-    @extend %lora-400;
     margin-bottom: 13px;
-    font-size: 45px;
   }
 
   &__text {
@@ -281,7 +268,6 @@
     @extend %opensans-400;
     color: vars.$color-text-muted;
     background-color: transparent;
-
   }
 
   &__input+.join-us__input {
@@ -293,9 +279,6 @@
     width: 100%;
     margin-top: 40px;
     margin-bottom: 20px;
-    background-color: vars.$color-accent;
-    text-transform: uppercase;
-    color: #fff;
     padding: 12px;
     border: none;
     position: relative;
@@ -305,19 +288,18 @@
   &__form-caption {
     font-size: 11px;
   }
-
 }
 
 .designer {
   padding: 150px 0 210px;
- position: relative;
+  position: relative;
 
   &__inner {
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
-   
   }
+
   &__decor {
     position: absolute;
     top: -220px;
@@ -331,9 +313,6 @@
   }
 
   &__title {
-    @extend %lora-400;
-    font-size: 45px;
-    text-transform: uppercase;
     margin-bottom: 50px;
   }
 
@@ -341,7 +320,6 @@
     color: vars.$color-text-muted;
     margin-bottom: 25px;
     font-size: 16px;
-
   }
 
   &__box {
@@ -362,16 +340,6 @@
     left: -160px;
     width: 296px;
     background-color: #fff;
-
-
-  }
-
-  &__link {
-    display: inline-block;
-    font-size: 16px;
-    padding: 10px 93px;
-    color: vars.$color-text-muted;
-    border: 1px solid vars.$bg-primary;
   }
 }
 
@@ -379,7 +347,6 @@
   background-color: vars.$bg-primary;
 
   &__wrapper {
-    display: flex;
     flex-direction: column;
     position: relative;
   }
@@ -402,12 +369,8 @@
     right: 0;
   }
 
-
   &__title {
-    @extend %lora-400;
-    font-size: 45px;
     margin-bottom: 50px;
-    text-transform: uppercase;
   }
 
   &__list {
@@ -443,16 +406,11 @@
     background-image: url(../images/our-blog-decor.svg);
     background-repeat: no-repeat;
     background-size: 211px 342px;
-   background-position: bottom 0 left 40px;
+    background-position: bottom 0 left 40px;
   }
 
-  &__content {}
-
   &__title {
-    @extend %lora-400;
-    font-size: 45px;
     margin-bottom: 50px;
-    text-transform: uppercase;
   }
 
   &__text {
@@ -464,10 +422,6 @@
 
   &__btn-link {
     font-size: 16px;
-    display: inline-block;
-    padding: 10px 93px;
-    border: 1px solid vars.$bg-primary;
-    color: vars.$color-text-muted;
   }
 
   &__link {
@@ -476,10 +430,6 @@
     font-size: 20px;
     color: vars.$color-text-muted;
   }
-
-  &__img {}
-
-  &__box {}
 
   &__box-right {
     grid-row: span 2;
@@ -490,11 +440,13 @@
   &__box-img {
     margin-bottom: 20px;
   }
+
   &__box-date {
     color: vars.$color-primary;
     font-size: 16px;
     @extend %opensans-300;
   }
+
   &__box-bottom {
     grid-column: span 2;
     margin-left: auto;

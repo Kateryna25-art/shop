@@ -33,15 +33,28 @@ body {
   margin: 0 auto;
 }
 
+.link-accent {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: vars.$color-accent;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
 .title-accent {
   @extend %lora-400;
   color: vars.$color-accent;
+  font-size: 45px;
+  text-transform: uppercase;
 }
 
 .btn-muted {
   color: vars.$color-text-muted;
-  border-color: vars.$color-text-muted;
+  border: 1px solid vars.$color-text-muted;
+  display: inline-block;
   min-width: 270px;
+  padding: 10px 65px;
+  font-size: 16px;
 }
 
 .visually-hidden {
