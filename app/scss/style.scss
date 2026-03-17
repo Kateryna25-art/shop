@@ -452,3 +452,67 @@
     margin-left: auto;
   }
 }
+
+.appointment {
+  padding: 50px 0 130px;
+  background-image: url(../images/appointment-decor.svg);
+  background-repeat: no-repeat;
+  background-position: center 105px;
+
+  &__title {
+    text-align: center;
+   
+    
+    margin-bottom: 77px;
+    
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 40px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  &__form-title {
+    font-size: 30px;
+    @extend %lora-400;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+  }
+
+  &__form-text {
+    margin-bottom: 30px;
+    color: vars.$color-text-muted;
+    @extend %opensans-700;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid vars.$color-text-muted;
+    color: vars.$color-text-muted;
+    background-color: transparent;
+    &::placeholder {
+      color: vars.$color-text-muted;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+   
+   
+    padding: 12px;
+    border-radius: 3px;
+    background-color: vars.$color-accent;
+  }
+
+ 
+}
