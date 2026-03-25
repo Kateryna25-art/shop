@@ -28,7 +28,8 @@ body {
 }
 
 .container {
-  min-width: 1220px;
+  max-width: 1220px;
+  width: 100%;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -72,4 +73,13 @@ body {
 
 .d-flex {
   display: flex;
+}
+
+.collections__item-text-accent {
+  text-align: center;
+  text-transform: uppercase;
+  @extend %lora-400;
+  background-color: vars.$color-accent;
+  color: #fff;
+  padding: 12px;
 }
