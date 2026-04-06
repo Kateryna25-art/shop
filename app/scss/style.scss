@@ -1017,3 +1017,78 @@
     right: 7px;
   }
 }
+
+.page-404 {
+  &__container {
+    max-width: 1560px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    display: flex;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    @extend %lora-400;
+    width: 741px;
+    margin: 205px 14px 0 35px;
+  }
+
+  &__title {
+    font-size: 160px;
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    display: flex;
+    gap: 20px;
+
+    align-items: flex-end;
+    text-transform: uppercase;
+
+    span {
+      font-size: 48px;
+      display: inline-block;
+      max-width: 620px;
+    }
+  }
+}
+
+.moving {
+  opacity: .2;
+  overflow: hidden;
+
+  &__text {
+    font-size: 160px;
+    @extend %lora-400;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    animation-name: moving;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    img {
+      height: 115px;
+      width: 145px;
+    }
+  }
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
