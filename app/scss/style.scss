@@ -1092,3 +1092,161 @@
     transform: translateX(-100%);
   }
 }
+
+.blog-main {
+
+  margin-bottom: 32px;
+
+  &__inner {
+    padding: 40px 0;
+    border-top: 1px solid #dcddde;
+    border-bottom: 1px solid #dcddde;
+    display: flex;
+    gap: 40px;
+
+  }
+
+  &__img {
+    width: 740px;
+    max-width: max-content;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__category {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 8px 24px;
+    border: 1px solid #dcddde;
+    font-size: 14px;
+    align-self: flex-start;
+  }
+
+  &__title {
+
+    a {
+      display: block;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      font-size: 48px;
+      @extend %lora-400;
+      line-height: 1.2;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    margin-bottom: auto;
+    opacity: 0.4;
+    max-width: 660px;
+  }
+
+  &__link {
+    font-size: 24px;
+    padding: 32px 64px;
+    text-transform: uppercase;
+    border: 1px solid vars.$color-accent;
+    align-self: flex-start;
+  }
+}
+
+.blog {
+  &__nav {
+    gap: 35px;
+    align-items: center;
+    margin-bottom: 33px;
+  }
+
+  &__nav-title {
+    margin-right: auto;
+    @extend %lora-400;
+    font-size: 32px;
+  }
+
+  &__select-form {}
+
+  &__search {
+    margin-top: 1px;
+  }
+
+  &__search-form {
+    position: relative;
+    width: 300px;
+  }
+
+  &__search-input {
+    border: none;
+    border-bottom: 1px solid #dcddde;
+    padding: 2px 31px 14px 3px;
+    width: 100%;
+
+    &::placeholder {
+      color: #000;
+      opacity: 0.4;
+    }
+  }
+
+  &__search-btn {
+    position: absolute;
+    right: 3px;
+    top: 8px;
+  }
+
+  &__nav-btns {
+    margin-left: 100px;
+    gap: 20px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 50px 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item-category {
+    display: inline-block;
+    padding: 8px 24px;
+    font-size: 14px;
+    border: 1px solid #dcddde;
+    margin-bottom: 16px;
+  }
+
+  &__item-title {
+    margin-bottom: 8px;
+    @extend %lora-500;
+    font-size: 24px;
+  }
+
+  &__item-date {
+    @extend %inter-400;
+    font-size: 16px;
+    opacity: 0.4;
+  }
+}
+
+.blog__select-wrapper {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/category-arrow.svg);
+    width: 19px;
+    height: 18px;
+    right: 3px;
+    top: 8px;
+  }
+}
+
+.select {
+  border: none;
+  width: 300px;
+  border-bottom: 1px solid #dcddde;
+  color: rgba($color: #000000, $alpha: 0.4);
+  appearance: none;
+  padding: 2px 31px 14px 3px;
+
+}
