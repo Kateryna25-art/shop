@@ -3,7 +3,7 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const scss = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify-es').default;
+const terser = require('gulp-terser').default;
 const autoPrefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
 const imagemin = require('gulp-imagemin');
@@ -55,7 +55,7 @@ function images(){
 
 
 function styles() {
-    return src('app/scss/*.scss')
+    return src(['node_modules/nouislider/dist/nouislider.css','app/scss/*.scss'])
     .pipe(scss({style: 'compressed'}))
     .pipe(autoPrefixer({
     overrideBrowserslist:['last 10 version']
@@ -69,10 +69,11 @@ function styles() {
 function scripts() {
     return src([
         'node_modules/swiper/swiper-bundle.js',
+        'node_modules/nouislider/dist/nouislider.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
 }
