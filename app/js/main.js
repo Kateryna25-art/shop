@@ -25,6 +25,21 @@ const swiperReviews = new Swiper('.reviews__slider', {
     type: "fraction",
   },
 
+   breakpoints: {
+        0: {
+          slidesPerView: 6,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 8,
+          spaceBetween: 16,
+        },
+        1024: {
+          slidesPerView: 12,
+          spaceBetween: 16,
+        },
+      },
+
 });
 
 const rangeSlider = document.querySelector('.range__slider');
