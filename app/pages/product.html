@@ -7,22 +7,34 @@
   <section class="product">
     <div class="container">
       <div class="product__inner">
-        <div class="product__images">
-          <picture>
+        <div class="slider-mobile">
+          <div class="product__images swiper-wrapper">
+          <picture class="swiper-slide">
             <source srcset="images/product-1.avif" type="image/avif">
             <source srcset="images/product-1.webp" type="image/webp">
             <img src="images/product-1.jpg" width="219" height="369" alt="white dress">
           </picture>
-          <picture>
+          <picture  class="swiper-slide">
             <source srcset="images/product-2.avif" type="image/avif">
             <source srcset="images/product-2.webp" type="image/webp">
             <img src="images/product-2.jpg" width="483" height="757" alt="collection dress">
           </picture>
-          <picture>
+          <picture  class="swiper-slide">
             <source srcset="images/product-3.avif" type="image/avif">
             <source srcset="images/product-3.webp" type="image/webp">
             <img src="images/product-3.jpg" width="219" height="369" alt="white dress">
           </picture>
+          </div>
+               <div class="product__arrow product__arrow-prev">
+            <svg width="10" height="18">
+              <use xlink:href="images/sprite.svg#arrow-left"></use>
+            </svg>
+          </div>
+          <div class="product__arrow product__arrow-next">
+            <svg width="10" height="18">
+              <use xlink:href="images/sprite.svg#arrow-right"></use>
+            </svg>
+          </div>
         </div>
         <div class="product__content">
           <h3 class="product__title title-accent">naomi</h3>

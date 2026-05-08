@@ -71,13 +71,108 @@
           </a>
         </li>
         <li class="header__actions-item">
-          <a class="header__actions-link" href="#" aria-label="shopping bag">
+          <a class="header__actions-link open-modal" href="#" aria-label="shopping bag">
             <svg width="24" height="24">
               <use xlink:href="images/sprite.svg#shopping-bag"></use>
             </svg>
           </a>
         </li>
       </ul>
+    </div>
+    <div class="modal" aria-hidden="true">
+      <div class="modal__overlay"></div> 
+      <div class="modal__content" role="dialog" aria-modal="true">
+        <div class="checkout__details-items">
+          <div class="checkout__details-itemsline">
+            <p class="checkout__details-quantity">2 items in bag</p>
+            <button class=" checkout__details-del close-modal" type="button" aria-label="close the modal window">
+              <svg width="18" height="18">
+                <use xlink:href="images/sprite.svg#checkout-del"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="checkout__item">
+            <picture>
+              <source srcset="images/order-1.avif" type="image/avif">
+              <source srcset="images/order-1.webp" type="image/webp">
+              <img class="checkout__item-img" width="139" height="182" src="images/order-1.jpg"
+                alt="wedding dress naomi" loading="lazy">
+            </picture>
+            <div class="checkout__item-box">
+              <p class="checkout__item-title">naomi</p>
+              <dl class="checkout__item-list">
+                <div class="checkout__item-listbox">
+                  <dt class="checkout__item-term">size:</dt>
+                  <dd class="checkout__item-difinition">s</dd>
+                </div>
+                <div class="checkout__item-listbox">
+                  <dt class="checkout__item-term">color:</dt>
+                  <dd class="checkout__item-difininion">ivory</dd>
+                </div>
+                <div class="checkout__item-listbox">
+                  <dt class="checkout__item-term">Item subtotal:</dt>
+                  <dd class="checkout__item-difininion">€ 2,600</dd>
+                </div>
+              </dl>
+              <button class="checkout__item-del" aria-label="remove naomi dress from bag">
+                <svg width="16" height="20">
+                  <use xlink:href="images/sprite.svg#item-del"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="checkout__item">
+            <picture>
+              <source srcset="images/order-2.avif" type="image/avif">
+              <source srcset="images/order-2.webp" type="image/webp">
+              <img class="checkout__item-img" width="139" height="182" src="images/order-2.jpg"
+                alt="wedding shoes sabine" loading="lazy">
+            </picture>
+            <div class="checkout__item-box">
+              <p class="checkout__item-title">sabine</p>
+              <dl class="checkout__item-list">
+                <div class="checkout__item-listbox">
+                  <dt class="checkout__item-term">size:</dt>
+                  <dd class="checkout__item-difininion">38</dd>
+                </div>
+                <div class="checkout__item-listbox">
+                  <dt class="checkout__item-term">color:</dt>
+                  <dd class="checkout__item-difininion">ivory</dd>
+                </div>
+                <div class="checkout__item-listbox">
+                  <dt class="checkout__item-term">Item subtotal:</dt>
+                  <dd class="checkout__item-difininion">€ 200</dd>
+                </div>
+              </dl>
+              <button class="checkout__item-del" aria-label="remove sabine shoes from bag">
+                <svg width="16" height="20">
+                  <use xlink:href="images/sprite.svg#item-del"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="order">
+          <dl class="order__list">
+            <div class="order__list-box">
+              <dt class="order__list-term">Subtotal:</dt>
+              <dd class="order__list-difinition">€2, 800</dd>
+            </div>
+            <div class="order__list-box">
+              <dt class="order__list-term">Shipping:</dt>
+              <dd class="order__list-difinition">free</dd>
+            </div>
+            <div class="order__list-box">
+              <dt class="order__list-term">Total:</dt>
+              <dd class="order__list-difinition">€ 2,800</dd>
+            </div>
+          </dl>
+          <div class="order__links">
+            <a class="order__link" href="#">keep shopping</a>
+            <a class="order__link-now" href="#">buy it now</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -94,28 +189,41 @@
           <a class="breadcrumbs__link" href="#">Collection
           </a>
         </li>
+         
       </ul>
     </div>
   </div>
   <section class="product">
     <div class="container">
       <div class="product__inner">
-        <div class="product__images">
-          <picture>
+        <div class="slider-mobile">
+          <div class="product__images swiper-wrapper">
+          <picture class="swiper-slide">
             <source srcset="images/product-1.avif" type="image/avif">
             <source srcset="images/product-1.webp" type="image/webp">
             <img src="images/product-1.jpg" width="219" height="369" alt="white dress">
           </picture>
-          <picture>
+          <picture  class="swiper-slide">
             <source srcset="images/product-2.avif" type="image/avif">
             <source srcset="images/product-2.webp" type="image/webp">
             <img src="images/product-2.jpg" width="483" height="757" alt="collection dress">
           </picture>
-          <picture>
+          <picture  class="swiper-slide">
             <source srcset="images/product-3.avif" type="image/avif">
             <source srcset="images/product-3.webp" type="image/webp">
             <img src="images/product-3.jpg" width="219" height="369" alt="white dress">
           </picture>
+          </div>
+               <div class="product__arrow product__arrow-prev">
+            <svg width="10" height="18">
+              <use xlink:href="images/sprite.svg#arrow-left"></use>
+            </svg>
+          </div>
+          <div class="product__arrow product__arrow-next">
+            <svg width="10" height="18">
+              <use xlink:href="images/sprite.svg#arrow-right"></use>
+            </svg>
+          </div>
         </div>
         <div class="product__content">
           <h3 class="product__title title-accent">naomi</h3>
